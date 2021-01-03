@@ -10,5 +10,7 @@ int main() {
     cout << "Hex: " << hex << i << endl;
     cout << endl;
   }
-  
+
+  return 0;
+
 }
