@@ -7,18 +7,25 @@ int main() {
   cout << "Digite: " << endl;
   cin >> n;
 
-  num = n;
-  invert = 0;
+  if(n>=1 && n<=9999){
+    num = n;
+    invert = 0;
 
-  for(int i=0;num!=0;i++){
-    digito = num % 10;
-    invert = (invert * 10) + digito;
-    num = num / 10;
-  }
-  if(n == invert){
-    cout << "Palindromo: " << endl;
+    for(int i=0;num!=0;i++){
+      digito = num % 10;
+      invert = (invert * 10) + digito;
+      num = num / 10;
+    }
+
+    if(n == invert){
+      cout << "Número Palindromo." << endl;
+    }else{
+      cout << "Número não Palindromo." << endl;
+    }
+
   }else{
-    cout << "Nao Palindromo: " << endl;
-}
+    cout << "Error: Digite Número Valido." << endl;
+  }
+  
   return 0;
 }
